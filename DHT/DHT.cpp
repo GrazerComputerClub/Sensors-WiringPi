@@ -27,7 +27,7 @@ DHTSensor::DHTSensor(BYTE DATAPin, BYTE Retries) {
   if (Retries>60) {
     m_Retries = 60;
   }
-  m_bDebug = true;
+  m_bDebug = false;
   ZeroData();
   m_Tries = 0;
   wiringPiSetupGpio();
