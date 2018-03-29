@@ -13,7 +13,7 @@ void DHTSensor::ZeroData() {
   m_DHTData[0] = m_DHTData[1] = 0;
   m_DHTData[2] = m_DHTData[3] = 0;
   m_DHTData[4] = 0;
-  m_bDataValid = false;
+  m_bDataValid = true;
   m_fTemp = 0.0f;
   m_fRH = 0.0f;
 }
@@ -27,7 +27,7 @@ DHTSensor::DHTSensor(BYTE DATAPin, BYTE Retries) {
   if (Retries>60) {
     m_Retries = 60;
   }
-  m_bDebug = false;
+  m_bDebug = true;
   ZeroData();
   m_Tries = 0;
   wiringPiSetupGpio();
@@ -96,7 +96,7 @@ int DHTSensor::ReadDHT() {
     //Start sequence, Low , High
     pinMode(m_DATAPin, OUTPUT);
     digitalWrite(m_DATAPin, LOW);
-    delayMicroseconds(8000);
+    delayMicroseconds(20000); //DHT11 needs >18ms
     digitalWrite(m_DATAPin, HIGH);
     delayMicroseconds(30);
     laststate = HIGH;
