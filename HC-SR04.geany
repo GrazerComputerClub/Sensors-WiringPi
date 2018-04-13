@@ -5,13 +5,13 @@ auto_continue_multiline=true
 
 [file_prefs]
 final_new_line=true
-ensure_convert_new_lines=false
-strip_trailing_spaces=false
-replace_tabs=false
+ensure_convert_new_lines=true
+strip_trailing_spaces=true
+replace_tabs=true
 
 [indentation]
 indent_width=2
-indent_type=1
+indent_type=0
 indent_hard_tab_width=8
 detect_indent=false
 detect_indent_width=false
@@ -19,7 +19,7 @@ indent_mode=2
 
 [project]
 name=HC-SR04
-base_path=/home/pi/Projekte/HC-SR04/
+base_path=/home/pi/Projekte/Sensors-WiringPi/HC-SR04/
 description=
 file_patterns=
 
@@ -29,19 +29,19 @@ long_line_column=72
 
 [files]
 current_page=0
-FILE_NAME_0=892;C++;0;EUTF-8;1;1;0;%2Fhome%2Fpi%2FProjekte%2FHC-SR04%2Fmain.cpp;0;2
-FILE_NAME_1=1228;C++;0;EUTF-8;1;1;0;%2Fhome%2Fpi%2FProjekte%2FHC-SR04%2FHC-SR04.cpp;0;2
-FILE_NAME_2=150;C++;0;EUTF-8;0;1;0;%2Fhome%2Fpi%2FProjekte%2FHC-SR04%2FHC-SR04.h;0;2
+FILE_NAME_0=892;C++;0;EUTF-8;1;1;0;%2Fhome%2Fpi%2FProjekte%2FSensors-WiringPi%2FHC-SR04%2Fmain.cpp;0;2
+FILE_NAME_1=1228;C++;0;EUTF-8;1;1;0;%2Fhome%2Fpi%2FProjekte%2FSensors-WiringPi%2FHC-SR04%2FHC-SR04.cpp;0;2
+FILE_NAME_2=150;C++;0;EUTF-8;0;1;0;%2Fhome%2Fpi%2FProjekte%2FSensors-WiringPi%2FHC-SR04%2FHC-SR04.h;0;2
 
 [build-menu]
 EX_00_LB=_Execute
 EX_00_CM=./HC-SR04
 EX_00_WD=
 C++FT_00_LB=_Compile
-C++FT_00_CM=g++ -Wall -c "%f" HC-SR04.cpp -lwiringPi
+C++FT_00_CM=g++ -Wall -c main.cpp HC-SR04.cpp -lwiringPi
 C++FT_00_WD=
 C++FT_01_LB=_Build
-C++FT_01_CM=g++ -Wall -o HC-SR04 "%f" HC-SR04.cpp -lwiringPi
+C++FT_01_CM=g++ -Wall -o HC-SR04 main.cpp HC-SR04.cpp -lwiringPi
 C++FT_01_WD=
 filetypes=C++;
 C++FT_02_LB=_Lint
