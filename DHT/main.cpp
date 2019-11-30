@@ -7,11 +7,11 @@
 #include <stdlib.h>
 
 int main (int argc, char *argv[]) {
-  int nDATAPin = 4;
+  int nDATAPin = 22;
 
   if (argc < 2) {
     printf("usage: %s <Pin>\n", argv[0]);
-    printf("  <Pin> is the BCM pin number (GPIO 4 default)\n");
+    printf("  <Pin> is the BCM pin number (GPIO 22 default)\n");
   } else {
     nDATAPin = atoi(argv[1]);
   }
