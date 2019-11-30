@@ -32,7 +32,7 @@ int main(void) {
     HCSR04.StartDistanceMeas();
     usleep(80000); //maxium distance 80ms=
     if (HCSR04.DataValid()) {
-      printf("distance: %.1f cm (time elapsed: %.2f ms)\n",
+      printf("distance: %5.1f cm (time elapsed: %.2f ms)\n",
       HCSR04.Distance(), HCSR04.DistanceTime()*1000.0f);
       usleep(30000);
     }
