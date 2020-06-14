@@ -9,7 +9,7 @@ void ISR_ECHO(void) {
   struct timeval now;
 
   gettimeofday(&now, 0);
-  if (HIGH ==  digitalRead(m_ECHOPin)) {
+  if (0==m_StartTime) {
     m_StartTime = now.tv_sec*1000000LL + now.tv_usec;
   } else {
     m_EndTime = now.tv_sec*1000000LL + now.tv_usec;
@@ -35,6 +35,7 @@ HCSR04Sensor::~HCSR04Sensor() {
 void HCSR04Sensor::StartDistanceMeas() {
   m_bDataValid = false;
   m_fDistance = 0.0;
+  m_StartTime = 0;
   digitalWrite(m_TRIGPin, HIGH); 
   delayMicroseconds(20000);
   gettimeofday(&m_MeasStartTime, 0);
