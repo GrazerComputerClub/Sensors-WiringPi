@@ -26,6 +26,7 @@ int main(void) {
 
   int nTRIGPin = 17;
   int nECHOPin = 27;
+  printf("HC-SR04 distance sensor (Trig: %d, Echo: %d)\n", nTRIGPin, nECHOPin);
   HCSR04Sensor HCSR04(nTRIGPin, nECHOPin);
 
   while(!end) {
@@ -35,7 +36,11 @@ int main(void) {
       printf("distance: %5.1f cm (time elapsed: %.2f ms)\n",
       HCSR04.Distance(), HCSR04.DistanceTime()*1000.0f);
       usleep(30000);
+    } else {
+      printf("timeout\n");
+      sleep(2);
     }
+    fflush(stdout);
   }
   return 0;
 }
