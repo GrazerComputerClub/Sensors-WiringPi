@@ -1,6 +1,7 @@
 // Example HC-SR04 Sensor (ultrasonic distance)
 // Code Licence: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
 // written by m.stroh
+// Compile: g++ -o HC-SR04 HC-SR04.cpp main.cpp -lwiringPi
 
 #include "HC-SR04.h"
 #include <stdio.h>
