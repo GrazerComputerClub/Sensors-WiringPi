@@ -7,7 +7,6 @@
 #include <stdio.h>
 #include <signal.h>
 #include <string.h>
-#include <unistd.h>
 
 static sig_atomic_t end = 0;
 
@@ -43,5 +42,7 @@ int main(void) {
     }
     fflush(stdout);
   }
+  printf("\n");
   return 0;
 }
+

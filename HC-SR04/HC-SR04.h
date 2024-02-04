@@ -13,7 +13,7 @@ typedef unsigned char BYTE;
 class HCSR04Sensor {
 
   public:
-    HCSR04Sensor(BYTE TRIGPin, BYTE ECHOPin);
+    HCSR04Sensor(BYTE TRIGPin, BYTE ECHOPin, bool Sysfs=true);
     ~HCSR04Sensor();
     void  StartDistanceMeas();
     float Distance(); //cm
@@ -31,3 +31,4 @@ class HCSR04Sensor {
 
 
 #endif //__HC_SR04__
+
