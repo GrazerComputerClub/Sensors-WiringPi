@@ -15,7 +15,7 @@ int main (int argc, char *argv[]) {
   } else {
     nDATAPin = atoi(argv[1]);
   }
-  printf("Raspberry Pi wiringPi DHT11/22 (AM2303) reader\n") ;
+  printf("Raspberry Pi wiringPi DHT11/22 (AM2303) reader @GPIO%d\n", nDATAPin) ;
   DHTSensor DHT(nDATAPin, 3);
   DHT.ReadDHT();
   if (DHT.DataValid()) {

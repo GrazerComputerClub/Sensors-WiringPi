@@ -28,6 +28,7 @@ void execute(const char* fmt, ...) {
 void ISR_ECHO(void) {
   struct timeval now;
 
+  if (m_Debug) printf(" ISR\n");
   gettimeofday(&now, 0);
   if (0==m_StartTime) {
     m_StartTime = now.tv_sec*1000000LL + now.tv_usec;
